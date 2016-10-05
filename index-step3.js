@@ -86,7 +86,7 @@ function main(){
 			$('#vies').text(tentative);
 			
 		/* METHODE SIMPLE : JUSTE AVEC NB DE TENTATIVES DEFINI*/
-			
+
 		// } if (tentative == 0) {
 		// 	alert('C\'est perdu, vous n\'avez pas trouvé le nombre mystère');
 		// 	location.reload(true);
@@ -94,7 +94,7 @@ function main(){
 
 		/* SINON METHODE AVEC NB DE CLICK LIMITE */ 
 
-		} if (compteur())
+		} if (compteur()){}
 	}
 	function compteur(){
 		nbClick++;
