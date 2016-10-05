@@ -32,7 +32,7 @@ function main(){
 				alert('C\'est gagné !');
 
 			} else {
-				alert('C\'est perdu !')
+				alert('C\'est perdu !');
 			}
 	}
 
