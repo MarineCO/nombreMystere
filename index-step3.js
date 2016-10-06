@@ -4,13 +4,12 @@ $(document).ready(main);
 
 function main(){
 
-	var tentative = 3;
+	var tentative;
 
-	var number = Math.floor(Math.random() * 101);
-	console.log(number);
+	var number;
 
-	var nbClick = 0;
-	var nbClickMax = 3;
+	// var nbClick = 0;
+	// var nbClickMax = 3;
 
 	// var number = 1 + (150-1+1) * Math.random();
 	// return Math.floor(number);
@@ -20,12 +19,12 @@ function main(){
 		tentative = 3;
 		$('#vies').text(tentative);
 
-		number;
+		number = Math.floor(Math.random() * 101);
+		console.log(number);
 
-		var nbClick = 0;
-		var nbClickMax = 3;
+		// var nbClick = 0;
+		// var nbClickMax = 3;
 	}
-	console.log('ok' + demarrerPartie());
 
 
 	function clickValider(){
@@ -34,12 +33,12 @@ function main(){
 
 		function partieGagnee(){
 
-			return (val == number)
+			return (val === number)
 		}
 
 		function partiePerdue(){
 
-			return (tentative == 0);
+			return (tentative === 0);
 		}
 
 		if (partieGagnee()){
@@ -75,6 +74,7 @@ function main(){
 // 		location.reload(true);
 // 	}
 // }
+demarrerPartie();
 
 $('button').click(function(){
 	clickValider();
