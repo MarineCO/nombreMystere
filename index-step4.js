@@ -2,24 +2,20 @@ $(document).ready(main);
 
 function main(){
 
-
 	var tentative = prompt('Choisissez votre nombres de tentatives');
 	$('#vies').html(tentative);
 	
 	var nbClick = 0;
 	var nbClickMax = $('#vies').html(tentative);
 
-	var min = parseInt(prompt('Choisit la valeur minimale du nombre mystère'));
+	var min = parseInt(prompt('Choisit la valeur minimale du nombre mystère'),10);
 	$('#mini').html(min);
 
-	var max = parseInt(prompt('Choisit la valeur maximale du nombre mystère'));
+	var max = parseInt(prompt('Choisit la valeur maximale du nombre mystère'),10);
 	$('#maxi').html(max);
 	
 	var number = Math.floor(Math.random() * (max - min + 1)) + min;
-	console.log(number);
-	// Pour quand l'ordinateur choisit tout seul entre 0 et 100
-	// var number = Math.floor(Math.random() * 101);
-	// OU number = parseInt(Math.random() * 101);
+
 
 	function clickValider(){
 

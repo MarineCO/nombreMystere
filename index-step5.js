@@ -2,31 +2,22 @@ $(document).ready(main);
 
 function main(){
 
-
 	var tentative = prompt('Choisissez votre nombres de tentatives');
-	$('#vies').html(tentative);
+	$('span').text(tentative);
 	
 	var nbClick = 0;
-	var nbClickMax = $('#vies').html(tentative);
+	var nbClickMax = $('span').text(tentative);
 
 	var min = parseInt(prompt('Choisit la valeur minimale du nombre mystère'));
-	$('#mini').html(min);
-
 	var max = parseInt(prompt('Choisit la valeur maximale du nombre mystère'));
-	$('#maxi').html(max);
+	
 	
 	var number = Math.floor(Math.random() * (max - min + 1)) + min;
-	console.log(number);
 
 
 	function clickValider(){
 
 		var val = parseInt($('input').val(),10);
-
-		var player1 = val;
-		var player2 = val;
-
-		var play = 
 
 //- Créer 2 possibilités, une pr chaque joueur
 
@@ -37,9 +28,19 @@ function main(){
 //- intégrer ces possibilités dans le jeu en faisant alterner les 2
 
 
-		function chgmtJoueur(){
-			
+		function chgmtJoueur() {
+			player1 == 1
+			tentative--;
+			$('#one').text(tentative);
+
+			player2 == 2
+			tentative--;
+			$('#two').text(tentative);
+
 		}
+		enCours = 
+
+
 
 		if (val === number){
 			alert('Gagné !');
@@ -48,12 +49,12 @@ function main(){
 		} else if (val > number) {
 			alert('Perdu, votre nombre est trop grand !');
 			tentative--;
-			$('#vies').text(tentative);
+			$('span').text(tentative);
 			
 		} else {
 			alert('Perdu, votre nombre est trop petit !');
 			tentative--;
-			$('#vies').text(tentative);
+			$('span').text(tentative);
 
 		} if (compteur()){}
 	}
